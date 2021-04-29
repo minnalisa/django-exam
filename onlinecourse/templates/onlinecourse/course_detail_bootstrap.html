@@ -67,7 +67,7 @@
             {% else %}
             <div id="exam">
             <input class="btn btn-info btn-block" type="" value="Start Exam">
-            <form id="questionform" action="point to a submit view" method="post">
+            <form id="questionform" action="{% url 'onlinecourse:submit' course.id %}" method="post">
                          {% for question in course.question_set.all %}
                         <div class="card mt-1">
                             <div class="card-header"><h5>{{ question.question_text}}</h5></div>
